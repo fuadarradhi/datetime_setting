@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 
-import 'package:flutter/services.dart';
 import 'package:datetime_setting/datetime_setting.dart';
 
 void main() {
@@ -14,7 +12,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   @override
   void initState() {
     super.initState();
@@ -28,15 +25,18 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: FlatButton(child: Text('Get Information Or Open Setting'), onPressed: () async{
-            bool timeAuto = await DatetimeSetting.timeIsAuto();
-            bool timezoneAuto = await DatetimeSetting.timeZoneIsAuto();
-            print(timeAuto);
-            print(timezoneAuto);
-            if (!timeAuto || !timezoneAuto){
-              await DatetimeSetting.openSetting();
-            }
-          },),
+          child: TextButton(
+            child: Text('Get Information Or Open Setting'),
+            onPressed: () async {
+              bool timeAuto = await DatetimeSetting.timeIsAuto();
+              bool timezoneAuto = await DatetimeSetting.timeZoneIsAuto();
+              print(timeAuto);
+              print(timezoneAuto);
+              if (!timeAuto || !timezoneAuto) {
+                await DatetimeSetting.openSetting();
+              }
+            },
+          ),
         ),
       ),
     );

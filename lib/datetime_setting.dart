@@ -6,11 +6,11 @@ class DatetimeSetting {
   static const MethodChannel _channel =
       const MethodChannel('datetime_setting');
 
-  static Future<bool> timeIsAuto() async {
+  static Future<bool?> timeIsAuto() async {
     return await _channel.invokeMethod('timeIsAuto');
   }
 
-  static Future<bool> timeZoneIsAuto() async {
+  static Future<bool?> timeZoneIsAuto() async {
     return await _channel.invokeMethod('timeZoneIsAuto');
   }
 

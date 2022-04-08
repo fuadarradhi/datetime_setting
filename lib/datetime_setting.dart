@@ -12,8 +12,4 @@ class DatetimeSetting {
   static Future<bool> timeZoneIsAuto() async {
     return await _channel.invokeMethod('timeZoneIsAuto');
   }
-
-  static Future<void> openSetting() async {
-    return await _channel.invokeMethod('openSetting');
-  }
 }

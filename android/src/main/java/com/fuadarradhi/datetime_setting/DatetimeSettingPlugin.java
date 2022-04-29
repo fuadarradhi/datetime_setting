@@ -53,6 +53,12 @@ public class DatetimeSettingPlugin implements FlutterPlugin, MethodCallHandler {
                     result.success(Settings.System.getInt(this.applicationContext.getContentResolver(), Settings.Global.AUTO_TIME_ZONE, 0) == 1);
                 }
                 break;
+            case "openSetting":
+                Intent intent = new Intent(android.provider.Settings.ACTION_DATE_SETTINGS);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                applicationContext.startActivity(intent);
+                result.success(true);
+                break;
             default:
                 result.notImplemented();
                 break;

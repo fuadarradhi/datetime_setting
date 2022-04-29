@@ -1,22 +1,14 @@
+import 'package:datetime_setting/datetime_setting.dart';
 import 'package:flutter/material.dart';
 
-import 'package:datetime_setting/datetime_setting.dart';
-
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-class _MyAppState extends State<MyApp> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,14 +18,15 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Center(
           child: TextButton(
-            child: Text('Get Information Or Open Setting'),
+            child: const Text('Get Information'),
             onPressed: () async {
               bool timeAuto = await DatetimeSetting.timeIsAuto();
               bool timezoneAuto = await DatetimeSetting.timeZoneIsAuto();
               print(timeAuto);
               print(timezoneAuto);
-              if (!timeAuto || !timezoneAuto) {
-                await DatetimeSetting.openSetting();
+
+              if (!timezoneAuto || !timeAuto) {
+                DatetimeSetting.openSetting();
               }
             },
           ),

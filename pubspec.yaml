@@ -1,6 +1,6 @@
 name: datetime_setting
 description: Flutter plugin to get information about auto time and auto timezone. Open setting if not set to auto.
-version: 2.0.2
+version: 3.0.0
 homepage: https://github.com/fuadarradhi/datetime_setting
 
 environment:

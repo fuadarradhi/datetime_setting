@@ -13,3 +13,8 @@
 ## 2.0.2
 
 * Get back "openSetting" function
+
+## 2.0.3
+
+* remove unused import to fix overrides a deprecated API (thanks @micheledamiano)
+* Upgraded SDK and Gradle versions (thanks @imaduddinmd)

@@ -1,10 +1,10 @@
 name: datetime_setting
 description: Flutter plugin to get information about auto time and auto timezone. Open setting if not set to auto.
-version: 3.0.0
+version: 2.0.3
 homepage: https://github.com/fuadarradhi/datetime_setting
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ">=2.12.0 <4.0.0"
   flutter: ">=1.10.0"
 
 dependencies:

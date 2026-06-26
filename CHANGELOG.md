@@ -1,3 +1,7 @@
+## 2.0.4
+
+* Add Swift Package Manager support for iOS
+
 ## 0.0.1
 
 * Initial release.

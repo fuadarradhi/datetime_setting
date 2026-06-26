@@ -29,6 +29,8 @@ flutter:
       android:
         package: com.fuadarradhi.datetime_setting
         pluginClass: DatetimeSettingPlugin
+      ios:
+        pluginClass: SwiftDatetimeSettingPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
